@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title= "Real time web chat"
+    script(src='/chat.js')
+    script(src='/socket.io/socket.io.js')
+    script(type='text/javascript', src="http://code.jquery.com/jquery-1.9.1.min.js")
+  body
+    | UserName:  
+    input(id='user_name', style='width:350px;')
+    #content(style='width: 500px; height: 300px; margin: 0 0 20px 0; border: solid 1px #999; overflow-y: scroll;')
+    .controls
+      input.field(id='field', style='width:350px;')
+      input.send(id='send', type='button', value='send')
